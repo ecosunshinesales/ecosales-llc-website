@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EcoSales LLC | Professional Consulting & Digital Business Services</title>
+
+    <meta name="description" content="EcoSales LLC is a U.S.-based consulting firm providing professional consulting and digital business services to clients worldwide.">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #17231f;
+            background: #ffffff;
+            line-height: 1.7;
+        }
+
+        /* HEADER */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,0.97);
+            border-bottom: 1px solid #e5ebe8;
+        }
+
+        .nav {
+            max-width: 1180px;
+            margin: auto;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: 0.4px;
+            color: #123C35;
+        }
+
+        .logo img {
+            display: block;
+            width: 62px;
+            height: 62px;
+            object-fit: contain;
+        }
+
+        .nav a {
+            margin-left: 28px;
+            color: #33423c;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .nav a:hover {
+            color: #2F7D68;
+        }
+
+        /* HERO */
+
+        .hero {
+            background:
+                linear-gradient(
+                    rgba(19, 55, 46, 0.96),
+                    rgba(27, 83, 67, 0.94)
+                );
+
+            color: white;
+            padding: 120px 30px;
+        }
+
+        .hero-inner {
+            max-width: 1050px;
+            margin: auto;
+        }
+
+        .eyebrow {
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 13px;
+            color: #b8d5ca;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 58px;
+            line-height: 1.12;
+            margin: 0 0 30px;
+            max-width: 850px;
+        }
+
+        .hero p {
+            max-width: 760px;
+            font-size: 20px;
+            color: #e2eeea;
+            line-height: 1.8;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 28px;
+            background: white;
+            color: #123C35;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 4px;
+        }
+
+        .button:hover {
+            background: #e7f0ec;
+        }
+
+        /* GENERAL */
+
+        section {
+            padding: 90px 30px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .section-label {
+            color: #2F7D68;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        h2 {
+            font-size: 38px;
+            line-height: 1.2;
+            margin: 0 0 25px;
+            color: #123C35;
+        }
+
+        .intro {
+            max-width: 760px;
+            color: #586761;
+            font-size: 18px;
+        }
+
+        /* ABOUT */
+
+        .about {
+            background: #F4F7F5;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-box {
+            background: white;
+            padding: 45px;
+            border-left: 4px solid #2F7D68;
+        }
+
+        .about-box h3 {
+            margin-top: 0;
+            color: #123C35;
+            font-size: 24px;
+        }
+
+        /* SERVICES */
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 45px;
+        }
+
+        .service {
+            border: 1px solid #e1e8e4;
+            padding: 35px;
+            background: white;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .service:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.07);
+        }
+
+        .service-number {
+            font-size: 13px;
+            color: #2F7D68;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .service h3 {
+            color: #123C35;
+            font-size: 21px;
+            margin: 18px 0 12px;
+        }
+
+        .service p {
+            color: #62706A;
+            font-size: 15px;
+        }
+
+        /* APPROACH */
+
+        .approach {
+            background: #123C35;
+            color: white;
+        }
+
+        .approach h2 {
+            color: white;
+        }
+
+        .approach .intro {
+            color: #d5e3de;
+        }
+
+        .approach-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 35px;
+            margin-top: 50px;
+        }
+
+        .approach-item {
+            border-top: 1px solid #5c8578;
+            padding-top: 25px;
+        }
+
+        .approach-item h3 {
+            font-size: 20px;
+        }
+
+        .approach-item p {
+            color: #c7d8d2;
+            font-size: 15px;
+        }
+
+        /* CONTACT */
+
+        .contact {
+            background: #F4F7F5;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .contact-details {
+            background: white;
+            padding: 40px;
+        }
+
+        .contact-details h3 {
+            color: #123C35;
+            margin-top: 0;
+        }
+
+        .contact-details p {
+            color: #586761;
+            margin: 18px 0;
+        }
+
+        .contact-details a {
+            color: #2F7D68;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #0B2924;
+            color: #b9cbc4;
+            padding: 35px 30px;
+        }
+
+        .footer-inner {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        footer strong {
+            color: white;
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 13px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            .nav {
+                padding: 18px 20px;
+            }
+
+            .logo img {
+                width: 50px;
+                height: 50px;
+            }
+
+            .logo {
+                font-size: 19px;
+                gap: 8px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 85px 25px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            section {
+                padding: 65px 22px;
+            }
+
+            h2 {
+                font-size: 32px;
+            }
+
+            .about-grid,
+            .services-grid,
+            .approach-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="nav">
+
+        <div class="logo">
+            <img src="logo-es.png" alt="EcoSales LLC">
+            <span>EcoSales LLC</span>
+        </div>
+
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#approach">Our Approach</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+    </div>
+</header>
+
+
+<section class="hero">
+
+    <div class="hero-inner">
+
+        <div class="eyebrow">
+            Professional Consulting Services
+        </div>
+
+        <h1>
+            Practical Solutions for Modern Business.
+        </h1>
+
+        <p>
+            EcoSales LLC is a U.S.-based consulting firm providing professional
+            consulting and digital business services to clients worldwide.
+            We work remotely to provide practical, tailored solutions that
+            address each client's specific needs.
+        </p>
+
+        <a class="button" href="#contact">
+            Contact EcoSales
+        </a>
+
+    </div>
+
+</section>
+
+
+<section id="about" class="about">
+
+    <div class="container">
+
+        <div class="about-grid">
+
+            <div>
+                <div class="section-label">
+                    About EcoSales
+                </div>
+
+                <h2>
+                    Professional Support with a Practical Approach.
+                </h2>
+
+                <p class="intro">
+                    EcoSales LLC provides professional consulting and digital business
+                    services with a focus on practical, tailored solutions.
+                </p>
+
+                <p class="intro">
+                    Our remote working model allows us to support clients
+                    across different markets while maintaining a flexible
+                    and client-focused approach.
+                </p>
+            </div>
+
+            <div class="about-box">
+
+                <h3>
+                    A Flexible Business Partner
+                </h3>
+
+                <p>
+                    We aim to understand the individual requirements of
+                    each client and provide clear, practical support
+                    adapted to their objectives.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="services">
+
+    <div class="container">
+
+        <div class="section-label">
+            Our Services
+        </div>
+
+        <h2>
+            Consulting and Digital Business Services.
+        </h2>
+
+        <p class="intro">
+            Our services are designed to provide practical support for
+            businesses and professionals operating in an increasingly
+            digital and international environment.
+        </p>
+
+
+        <div class="services-grid">
+
+            <div class="service">
+
+                <div class="service-number">
+                    01
+                </div>
+
+                <h3>
+                    Business Consulting
+                </h3>
+
+                <p>
+                    Practical consulting support tailored to the
+                    individual requirements and objectives of each client.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <div class="service-number">
+                    02
+                </div>
+
+                <h3>
+                    Digital Business Services
+                </h3>
+
+                <p>
+                    Digital business services designed to support modern business
+                    operations and online activities.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <div class="service-number">
+                    03
+                </div>
+
+                <h3>
+                    Remote Professional Support
+                </h3>
+
+                <p>
+                    Flexible remote support for clients seeking practical
+                    solutions across different markets and locations.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="approach" class="approach">
+
+    <div class="container">
+
+        <div class="section-label">
+            Our Approach
+        </div>
+
+        <h2>
+            Clear. Practical. Client-Focused.
+        </h2>
+
+        <p class="intro">
+            We believe consulting should be straightforward, flexible, and focused
+            on each client's specific needs.
+        </p>
+
+
+        <div class="approach-grid">
+
+            <div class="approach-item">
+
+                <h3>
+                    Tailored Solutions
+                </h3>
+
+                <p>
+                    We focus on the individual circumstances and objectives
+                    of each client.
+                </p>
+
+            </div>
+
+
+            <div class="approach-item">
+
+                <h3>
+                    Practical Thinking
+                </h3>
+
+                <p>
+                    Our approach focuses on practical, effective solutions rather
+                    than unnecessary complexity.
+                </p>
+
+            </div>
+
+
+            <div class="approach-item">
+
+                <h3>
+                    Global Reach
+                </h3>
+
+                <p>
+                    Our remote model allows us to work with clients worldwide.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="contact" class="contact">
+
+    <div class="container">
+
+        <div class="contact-grid">
+
+            <div>
+
+                <div class="section-label">
+                    Contact
+                </div>
+
+                <h2>
+                    Let's Discuss Your Business Needs.
+                </h2>
+
+                <p class="intro">
+                    For professional consulting and digital business services,
+                    contact EcoSales LLC directly.
+                </p>
+
+            </div>
+
+
+            <div class="contact-details">
+
+                <h3>
+                    EcoSales LLC
+                </h3>
+
+                <p>
+                    <strong>Email</strong><br>
+                    <a href="mailto:eco.sunshine.sales@gmail.com">
+                        eco.sunshine.sales@gmail.com
+                    </a>
+                </p>
+
+                <p>
+                    <strong>Business Address</strong><br>
+                    1209 Mountain Road PL NE STE R<br>
+                    Albuquerque, NM 87110
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <div class="footer-inner">
+
+        <div>
+            <strong>EcoSales LLC</strong>
+            <p>Professional Consulting & Digital Business Services</p>
+        </div>
+
+        <div>
+            <p>© 2026 EcoSales LLC. All rights reserved.</p>
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
